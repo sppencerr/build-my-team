@@ -3,43 +3,43 @@ const Manager = require("../lib/manager");
 describe("Manager", ()=>{
     describe("Initialization", ()=>{
         it("should return an object containing a name, id, email and office num property when called with the 'new' keyword and values supplies for 'name, id, email, office number'", ()=>{
-            const mgr = new Manager("MGR", "james", "1234", "james@gmail.com", "1");
+            const mgr = new Manager("MGR", "Ash", "1234", "ashbabe@gmail.com", "1");
 
-            expect(mgr.name).toBe("james");
+            expect(mgr.name).toBe("Ash");
             expect(mgr.id).toBe("1234");
-            expect(mgr.email).toBe("james@gmail.com");
+            expect(mgr.email).toBe("ashbabe@gmail.com");
             expect(mgr.office).toBe("1");
 
         });
     });
     
-    describe("Manager Methods - getName", ()=>{
+    describe("Manager getName", ()=>{
         it("should return Manager name", ()=>{
-            const mgrName = new Manager("MGR", "jimManager", "54545", "boss@coemail.com", "1").getName();
-            expect(mgrName).toBe("jimManager");
+            const mgrName = new Manager("MGR", "ConnorManager", "320413", "genji@coldmail.com", "1").getName();
+            expect(mgrName).toBe("ConnorManager");
         });
     });
-    describe("Manager Methods - getId", ()=>{
+    describe("Manager getId", ()=>{
         it("should return manager id", ()=>{
-            const mgrId = new Manager("MGR", "jimManager", "54545", "boss@coemail.com", "1").getId();
-            expect(mgrId).toBe("54545");
+            const mgrId = new Manager("MGR", "ConnorManager", "320413", "genji@coldmail.com", "1").getId();
+            expect(mgrId).toBe("320413");
         });
     });
-    describe("Manager Methods - getEmail", ()=>{
+    describe("Manager getEmail", ()=>{
         it("should return an managers's email", ()=>{
-            const mgrEmail = new Manager("MGR", "jimManager", "54545", "boss@coemail.com", "1").getEmail();
-            expect(mgrEmail).toBe("boss@coemail.com");
+            const mgrEmail = new Manager("MGR", "ConnorManager", "320413", "genji@coldmail.com", "1").getEmail();
+            expect(mgrEmail).toBe("genji@coldmail.com");
         });
     });
-    describe("Manager Methods - getOffice", ()=>{
+    describe("Manager getOffice", ()=>{
         it("should return an managers's office number", ()=>{
-            const mgrOffice = new Manager("MGR", "jimManager", "54545", "boss@coemail.com", "1").getOffice();
+            const mgrOffice = new Manager("MGR", "ConnorManager", "320413", "genji@coldmail.com", "1").getOffice();
             expect(mgrOffice).toBe("1");
         });
     });
-    describe("Manager Methods - getRole", ()=>{
+    describe("Manager getRole", ()=>{
         it("should return 'Manager'", ()=>{
-            const mgrRole = new Manager("MGR", "jimManager", "54545", "boss@coemail.com", "1").getRole();
+            const mgrRole = new Manager("MGR", "ConnorManager", "320413", "genji@coldmail.com", "1").getRole();
             expect(mgrRole).toBe("Manager");
         });
     });

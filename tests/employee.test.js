@@ -15,31 +15,31 @@ describe("Engineer", ()=>{
     
     describe("Engineer getName", ()=>{
         it("should return engineer name", ()=>{
-            const engName = new Engineer("ENG", "adam", "4321", "adam@atom.com", "microatom").getName();
-            expect(engName).toBe("adam");
+            const engName = new Engineer("ENG", "Adam", "4321", "adam@atom.com", "microatom").getName();
+            expect(engName).toBe("Adam");
         });
     });
     describe("Engineer getId", ()=>{
         it("should return engineer id", ()=>{
-            const engId = new Engineer("ENG", "adam", "12132", "adam@atom.com", "microatom").getId();
+            const engId = new Engineer("ENG", "Adam", "12132", "adam@atom.com", "microatom").getId();
             expect(engId).toBe("12132");
         });
     });
     describe("Engineer getEmail", ()=>{
         it("should return engineer's email", ()=>{
-            const engEmail = new Engineer("ENG", "adam", "12132", "adam!@atom.com", "microatom").getEmail();
+            const engEmail = new Engineer("ENG", "Adam", "12132", "adam!@atom.com", "microatom").getEmail();
             expect(engEmail).toBe("adam!@atom.com");
         });
     });
     describe("Engineer getGithub", ()=>{
         it("should return engineer's github account", ()=>{
-            const engGithub = new Engineer("ENG", "adam", "12132", "adam!@atom.com", "microatom").getGithub();
+            const engGithub = new Engineer("ENG", "Adam", "12132", "adam!@atom.com", "microatom").getGithub();
             expect(engGithub).toBe("microatom");
         });
     });
     describe("Engineer getRole", ()=>{
         it("should return 'Engineer'", ()=>{
-            const engRole = new Engineer("ENG", "adam", "12132", "adam!@atom.com", "microatom").getRole();
+            const engRole = new Engineer("ENG", "Adam", "12132", "adam!@atom.com", "microatom").getRole();
             expect(engRole).toBe("Engineer");
         });
     });

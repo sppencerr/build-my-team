@@ -1,7 +1,7 @@
 const fs = require("fs");
 const inquirer = require("inquirer");
 const Manager = require("../lib/manager");
-const Engineer = require("../lib/engineer");
+const engineer = require("../lib/engineer");
 const Intern = require("../lib/intern");
 
 // build questions for manager
@@ -89,7 +89,7 @@ const questionsCont = {
 };
 
 questionsMngr.push(questionsCont);
-questionseng.push(questionsCont);
+questionsEng.push(questionsCont);
 questionsInt.push(questionsCont);
 
 function Employee(type, name, id, email) {
@@ -107,7 +107,7 @@ const getAnswers = async (employeeType, employees = []) => {
       questions = questionsMngr;
       break;
     case "Eng":
-      questions = questionseng;
+      questions = questionsEng;
       break;
     case "Int":
       questions = questionsInt;
@@ -148,7 +148,7 @@ const htmlGenerator = async (data) => {
           data[i].office
         );
         break;
-      case "eng":
+      case "Eng":
         employees[i] = new engineer(
           data[i].type,
           data[i].name,
@@ -177,7 +177,7 @@ const htmlGenerator = async (data) => {
       case "Mngr":
         returnString = `<img class="" src="img/coffe.png" style="max-height:30px;" alt="sippin"/> <span class="font-weight-bold h5" >Manager</span>`;
         break;
-      case "eng":
+      case "Eng":
         returnString = `<img class="" src="img/glasses.png" style="max-height:30px; " alt="bozo"/> <span class="font-weight-bold h5" >Engineer</span>`;
         break;
       case "Int":

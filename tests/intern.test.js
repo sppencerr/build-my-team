@@ -15,8 +15,8 @@ describe("Intern", ()=>{
     
     describe("Intern getName", ()=>{
         it("should return Intern name", ()=>{
-            const intName = new Intern("INT", "newIntern", "4321", "michelle@gmail.com", "UofT").getName();
-            expect(intName).toBe("newIntern");
+            const intName = new Intern("INT", "Lois", "4321", "michelle@gmail.com", "UofT").getName();
+            expect(intName).toBe("Lois");
         });
     });
     describe("Intern getId", ()=>{

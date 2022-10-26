@@ -15,6 +15,7 @@
   "directories": {
     "lib": "lib",
     "test": "tests"
+    
   },
   "keywords": []
 }
