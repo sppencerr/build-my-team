@@ -1,39 +1,46 @@
-const Employee = require("../lib/employee");
+const Engineer = require("../lib/engineer");
 
-describe("Employee", ()=>{
+describe("Engineer", ()=>{
     describe("Initialization", ()=>{
-        it("should return an object containing a name, id and email when called with the 'new' keyword it should also return a 'name, id and email'", ()=>{
-            const emp = new Employee("EMP","kou", "1234", "kou@gmail.com");
+        it("should return an object containing a name, id, email and github property when called with the 'new' keyword also should return 'name, id, email, github'", ()=>{
+            const eng = new Engineer("ENG", "kessia", "1234", "kessia@email.com", "kessington");
 
-            expect(emp.name).toBe("kou");
-            expect(emp.id).toBe("1234");
-            expect(emp.email).toBe("kou@gmail.com")
+            expect(eng.name).toBe("kessia");
+            expect(eng.id).toBe("1234");
+            expect(eng.email).toBe("kessia@email.com");
+            expect(eng.github).toBe("kessington")
 
         });
     });
     
-    describe("Employee getName", ()=>{
-        it("should return employee name", ()=>{
-            const empName = new Employee("EMP","futuba", "4321", "futuba@gmail.com").getName();
-            expect(empName).toBe("futuba");
+    describe("Engineer getName", ()=>{
+        it("should return engineer name", ()=>{
+            const engName = new Engineer("ENG", "adam", "4321", "adam@atom.com", "microatom").getName();
+            expect(engName).toBe("adam");
         });
     });
-    describe("Employee getId", ()=>{
-        it("should return employee id", ()=>{
-            const empId = new Employee("EMP","futuba", "12132", "futuba@gmail.com").getId();
-            expect(empId).toBe("12132");
+    describe("Engineer getId", ()=>{
+        it("should return engineer id", ()=>{
+            const engId = new Engineer("ENG", "adam", "12132", "adam@atom.com", "microatom").getId();
+            expect(engId).toBe("12132");
         });
     });
-    describe("Employee getEmail", ()=>{
-        it("should return employee email", ()=>{
-            const empEmail = new Employee("EMP","futuba", "12132", "futuba!@gmail.com").getEmail();
-            expect(empEmail).toBe("futuba!@gmail.com");
+    describe("Engineer getEmail", ()=>{
+        it("should return engineer's email", ()=>{
+            const engEmail = new Engineer("ENG", "adam", "12132", "adam!@atom.com", "microatom").getEmail();
+            expect(engEmail).toBe("adam!@atom.com");
         });
     });
-    describe("Employee getRole", ()=>{
-        it("should return 'Employee role", ()=>{
-            const empRole = new Employee("EMP","futuba", "12132", "futuba!@gmail.com").getRole();
-            expect(empRole).toBe("Employee");
+    describe("Engineer getGithub", ()=>{
+        it("should return engineer's github account", ()=>{
+            const engGithub = new Engineer("ENG", "adam", "12132", "adam!@atom.com", "microatom").getGithub();
+            expect(engGithub).toBe("microatom");
+        });
+    });
+    describe("Engineer getRole", ()=>{
+        it("should return 'Engineer'", ()=>{
+            const engRole = new Engineer("ENG", "adam", "12132", "adam!@atom.com", "microatom").getRole();
+            expect(engRole).toBe("Engineer");
         });
     });
 });

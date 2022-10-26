@@ -1,8 +1,8 @@
 const fs = require("fs");
 const inquirer = require("inquirer");
 const Manager = require("../lib/manager");
-const engineer = require("../lib/engineer");
-const Intern = require("../lib/Intern");
+const Engineer = require("../lib/engineer");
+const Intern = require("../lib/intern");
 
 // build questions for manager
 const questionsMngr = [
@@ -227,7 +227,7 @@ const htmlGenerator = async (data) => {
             <div class="mb-2">
                 ${getCardHeader(employees[i].type, employees[i].name)}
             </div>
-            <p class="card-text">Employee ID: <span class="font-weight-bold"> ${
+            <p class="card-text">Employee Id: <span class="font-weight-bold"> ${
               employees[i].id
             }</span></p>
             <p class="card-text">Email: <span class="font-weight-bold"> <a href="mailto:${
