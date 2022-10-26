@@ -1,48 +1,39 @@
 const Employee = require("../lib/employee");
 
-test("Can instantiate Employee instance", () => {
-  const e = new Employee();
-  expect(typeof(e)).toBe("object");
-});
+describe("Employee", ()=>{
+    describe("Initialization", ()=>{
+        it("should return an object containing a name, id and email when called with the 'new' keyword it should also return a 'name, id and email'", ()=>{
+            const emp = new Employee("EMP","kou", "1234", "kou@gmail.com");
 
-test("Can set name from constructor arguments", () => {
-  const name = "Suzie";
-  const e = new Employee(name);
-  expect(e.name).toBe(name);
-});
+            expect(emp.name).toBe("kou");
+            expect(emp.id).toBe("1234");
+            expect(emp.email).toBe("kou@gmail.com")
 
-test("Can set id from constructor argument", () => {
-  const testValue = 100;
-  const e = new Employee("Foo", testValue);
-  expect(e.id).toBe(testValue);
-});
-
-test("Can set email from constructor argument", () => {
-  const testValue = "test@test.com";
-  const e = new Employee("Foo", 1, testValue);
-  expect(e.email).toBe(testValue);
-});
-
-test("Can get name from getName()", () => {
-  const testValue = "Alice";
-  const e = new Employee(testValue);
-  expect(e.getName()).toBe(testValue);
-});
-
-test("Can get id from getId()", () => {
-  const testValue = 100;
-  const e = new Employee("Foo", testValue);
-  expect(e.getId()).toBe(testValue);
-});
-
-test("Can get email from getEmail()", () => {
-  const testValue = "test@test.com";
-  const e = new Employee("Foo", 1, testValue);
-  expect(e.getEmail()).toBe(testValue);
-});
-
-test("getRole() should return \"Employee\"", () => {
-  const testValue = "Employee";
-  const e = new Employee("Alice", 1, "test@test.com");
-  expect(e.getRole()).toBe(testValue);
+        });
+    });
+    
+    describe("Employee getName", ()=>{
+        it("should return employee name", ()=>{
+            const empName = new Employee("EMP","futuba", "4321", "futuba@gmail.com").getName();
+            expect(empName).toBe("futuba");
+        });
+    });
+    describe("Employee getId", ()=>{
+        it("should return employee id", ()=>{
+            const empId = new Employee("EMP","futuba", "12132", "futuba@gmail.com").getId();
+            expect(empId).toBe("12132");
+        });
+    });
+    describe("Employee getEmail", ()=>{
+        it("should return employee email", ()=>{
+            const empEmail = new Employee("EMP","futuba", "12132", "futuba!@gmail.com").getEmail();
+            expect(empEmail).toBe("futuba!@gmail.com");
+        });
+    });
+    describe("Employee getRole", ()=>{
+        it("should return 'Employee role", ()=>{
+            const empRole = new Employee("EMP","futuba", "12132", "futuba!@gmail.com").getRole();
+            expect(empRole).toBe("Employee");
+        });
+    });
 });
