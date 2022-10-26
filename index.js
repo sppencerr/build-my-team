@@ -2,13 +2,13 @@ const inquirer = require('inquirer');
 
 const fs = require('fs');
 
-const Intern = require('./library/intern');
+const Intern = require('./lib/intern');
 
-const Manager = require('./library/manager');
+const Manager = require('./lib/manager');
 
-const Engineer = require('./library/engineer');
+const Engineer = require('./lib/engineer');
 
-const Questions = require('./library/Questions');
+const Questions = require('./lib/questions');
 
 const members = [];
 
