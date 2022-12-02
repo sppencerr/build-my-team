@@ -9,7 +9,6 @@ const distribution = path.resolve(__dirname, 'dist');
 const outIndex = path.join(distribution, 'index.html');
 const team = [];
 
-
 function promptUser() {
     inquirer.prompt([
         {

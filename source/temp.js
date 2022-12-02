@@ -111,5 +111,3 @@ module.exports = team => {
 </html>
     `;
 };
-
-// index.js line 98 linked to line 104 above
